@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podólogo en Granada ANTONIO BARRIOS</title>
+<meta name="description" content="Podólogo en Granada Antonio Barrios. Consulta de podología en C. San Sebastián de la Gomera, 3 (18014 Granada): quiropodia, uña encarnada, dolor de talón, estudio de la pisada y plantillas a medida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: banda de contacto + nav fija, hero partido texto/foto, secciones alternas papel / menta / pino */
+:root{
+  --pine:#133F37;
+  --pine-2:#1E5A4E;
+  --mint:#E2F0EA;
+  --mint-2:#C9E4D9;
+  --paper:#F7F8F6;
+  --white:#FFFFFF;
+  --ink:#15211E;
+  --muted:#56665F;
+  --line:#DAE3DF;
+  --coral:#EE8457;
+  --on-pine:#EAF4F0;
+  --on-pine-muted:#A9C6BC;
+
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --wrap:1200px;
+  --r-lg:28px;
+  --r-md:18px;
+  --r-sm:12px;
+  --gutter:max(16px, 4vw);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+section{padding-block:clamp(72px,9vw,120px)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pine-2)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--coral);border-radius:2px}
+.sec-head{display:grid;gap:18px;max-width:720px;margin-bottom:clamp(40px,5vw,60px)}
+.sec-head h2{font-size:clamp(34px,4.6vw,54px);font-weight:600}
+.sec-head p{color:var(--muted);font-size:18px;max-width:60ch}
+.sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;font-family:var(--f-body)}
+.btn svg{width:18px;height:18px;transition:transform .2s ease}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--pine);color:var(--white)}
+.btn-primary:hover{background:var(--pine-2)}
+.btn-ghost{border-color:var(--pine);color:var(--pine);background:transparent}
+.btn-ghost:hover{background:var(--pine);color:var(--white)}
+.btn-coral{background:var(--coral);color:var(--ink)}
+.btn-coral:hover{background:#F39A73}
+.btn-light{background:var(--white);color:var(--pine)}
+
+/* ---------- Top bar ---------- */
+.topbar{background:var(--pine);color:var(--on-pine);font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:9px;flex-wrap:wrap}
+.topbar span{display:inline-flex;align-items:center;gap:8px;color:var(--on-pine-muted)}
+.topbar strong{color:var(--on-pine);font-weight:500}
+.topbar svg{width:15px;height:15px;color:var(--coral)}
+.topbar .tb-left{display:flex;gap:24px;flex-wrap:wrap}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,248,246,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand-mark{width:44px;height:44px;border-radius:14px;background:var(--pine);display:grid;place-items:center;flex:none}
+.brand-mark svg{width:28px;height:28px}
+.brand-text{display:grid;line-height:1.1;min-width:0}
+.brand-text b{font-family:var(--f-display);font-size:19px;font-weight:700;letter-spacing:-.01em;color:var(--pine)}
+.brand-text small{font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15.5px;color:var(--ink);transition:background .2s}
+.nav-links a:hover{background:var(--mint)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{padding:12px 20px;font-size:15px}
+.menu-btn{display:none;width:46px;height:46px;border-radius:14px;border:1.5px solid var(--line);background:var(--white);cursor:pointer;place-items:center;color:var(--pine)}
+.menu-btn svg{width:22px;height:22px}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:clamp(40px,6vw,72px) clamp(64px,8vw,104px)}
+.hero .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-copy{display:grid;gap:28px;min-width:0}
+.pill{display:inline-flex;align-items:center;gap:10px;justify-self:start;padding:7px 16px 7px 8px;background:var(--white);border:1px solid var(--line);border-radius:999px;font-size:14.5px;font-weight:500}
+.avatars{display:flex}
+.avatars i{width:28px;height:28px;border-radius:50%;border:2px solid var(--white);margin-left:-8px;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;color:var(--pine)}
+.avatars i:first-child{margin-left:0;background:var(--mint-2)}
+.avatars i:nth-child(2){background:#F7D3C1}
+.avatars i:nth-child(3){background:#D9E6F5}
+.stars{color:var(--coral);letter-spacing:1px}
+.hero h1{font-size:clamp(44px,6.4vw,82px);font-weight:600;letter-spacing:-.035em;color:var(--pine)}
+.hero h1 em{font-style:normal;position:relative;white-space:nowrap;color:var(--ink)}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--coral);opacity:.55;border-radius:4px;z-index:-1}
+.hero-lead{font-size:19px;color:var(--muted);max-width:52ch}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-visual{position:relative;min-width:0}
+.hero-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;max-height:640px;width:100%;background:var(--mint)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.float-card{position:absolute;background:var(--white);border-radius:var(--r-md);box-shadow:0 18px 40px -18px rgba(19,63,55,.35);padding:16px 18px;display:flex;align-items:center;gap:14px}
+.float-card .ico{width:44px;height:44px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--pine);flex:none}
+.float-card .ico svg{width:24px;height:24px}
+.float-card b{display:block;font-family:var(--f-display);font-size:17px;line-height:1.2}
+.float-card small{color:var(--muted);font-size:13.5px}
+.fc-1{left:-28px;bottom:48px;max-width:290px}
+.fc-2{right:-18px;top:36px}
+
+.stats{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg)}
+.stat{padding:28px 30px;display:grid;gap:4px}
+.stat + .stat{border-left:1px solid var(--line)}
+.stat b{font-family:var(--f-display);font-size:clamp(34px,3.6vw,46px);font-weight:600;color:var(--pine);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.stat b sup{font-size:.5em;color:var(--coral);vertical-align:super}
+.stat span{color:var(--muted);font-size:15px}
+
+/* ---------- Ticker ---------- */
+.ticker{background:var(--pine);color:var(--on-pine);padding-block:22px;overflow:hidden}
+.ticker-track{display:flex;gap:44px;width:max-content;animation:tick 42s linear infinite}
+.ticker-track span{display:inline-flex;align-items:center;gap:44px;font-family:var(--f-display);font-size:24px;font-weight:500;white-space:nowrap}
+.ticker-track span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--coral)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- Sobre ---------- */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.about-media{position:relative;min-width:0}
+.about-media .a1{border-radius:var(--r-lg);aspect-ratio:4/5;object-fit:cover;width:82%}
+.about-media .a2{position:absolute;right:0;bottom:-36px;width:52%;aspect-ratio:1;object-fit:cover;border-radius:var(--r-md);border:8px solid var(--paper)}
+.about-copy{display:grid;gap:26px;min-width:0}
+.about-copy h2{font-size:clamp(32px,4.2vw,50px);font-weight:600}
+.about-copy > p{color:var(--muted);font-size:18px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pillar{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:20px;display:grid;gap:8px;align-content:start}
+.pillar h3{font-size:19px;font-weight:600;color:var(--pine)}
+.pillar p{font-size:15px;color:var(--muted);line-height:1.5}
+
+/* ---------- Servicios ---------- */
+.services{background:var(--white)}
+.svc-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,48px)}
+.svc-top .sec-head{margin-bottom:0}
+.tabs{display:inline-flex;background:var(--mint);border-radius:999px;padding:5px;gap:4px}
+.tab{border:0;background:transparent;font:600 15.5px var(--f-body);padding:12px 22px;border-radius:999px;cursor:pointer;color:var(--pine);transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--pine);color:var(--white)}
+.svc-panel{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--paper);display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease}
+.svc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(19,63,55,.4)}
+.svc-img{aspect-ratio:16/10;overflow:hidden;background:var(--mint)}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.svc:hover .svc-img img{transform:scale(1.04)}
+.svc-body{padding:22px 22px 24px;display:grid;gap:10px;align-content:start;flex:1}
+.svc-body .tag{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--pine-2)}
+.svc-body h3{font-size:22px;font-weight:600}
+.svc-body p{font-size:15.5px;color:var(--muted);line-height:1.55}
+.svc.compact .svc-body{padding-top:26px}
+.svc .ic{width:48px;height:48px;border-radius:14px;background:var(--mint);color:var(--pine);display:grid;place-items:center;margin-bottom:6px}
+.svc .ic svg{width:26px;height:26px}
+
+/* ---------- Por qué ---------- */
+.why{background:var(--pine);color:var(--on-pine)}
+.why .eyebrow{color:var(--on-pine-muted)}
+.why .sec-head p{color:var(--on-pine-muted)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.why-list{display:grid;gap:14px}
+.why-item{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px;border-radius:var(--r-md);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.why-item .ic{width:46px;height:46px;border-radius:12px;background:var(--coral);color:var(--ink);display:grid;place-items:center}
+.why-item .ic svg{width:24px;height:24px}
+.why-item h3{font-size:21px;font-weight:600;color:var(--white);margin-bottom:6px}
+.why-item p{color:var(--on-pine-muted);font-size:15.5px}
+.why-media{position:relative;min-width:0}
+.why-media img{border-radius:var(--r-lg);aspect-ratio:16/11;object-fit:cover;width:100%}
+.why-media .quote{position:absolute;left:24px;right:24px;bottom:24px;background:rgba(19,63,55,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:var(--r-md);padding:18px 20px;font-size:15.5px;color:var(--on-pine)}
+.why-media .quote b{color:var(--white);font-family:var(--f-display);font-weight:600}
+
+/* ---------- Proceso ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+.step{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:26px 22px;display:grid;gap:12px;align-content:start}
+.step-n{font-family:var(--f-display);font-size:15px;font-weight:600;color:var(--coral);display:flex;align-items:center;gap:10px}
+.step-n::after{content:"";flex:1;height:1px;background:var(--line)}
+.step h3{font-size:21px;font-weight:600;color:var(--pine)}
+.step p{color:var(--muted);font-size:15.5px}
+.step small{display:inline-block;justify-self:start;margin-top:4px;padding:4px 10px;border-radius:999px;background:var(--mint);color:var(--pine);font-weight:600;font-size:13px}
+
+/* ---------- Tarifas ---------- */
+.pricing{background:var(--mint)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan{background:var(--white);border-radius:var(--r-lg);padding:32px 28px;display:flex;flex-direction:column;gap:20px;border:1px solid var(--mint-2)}
+.plan.featured{background:var(--pine);color:var(--on-pine);border-color:var(--pine)}
+.plan-head{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.plan h3{font-size:24px;font-weight:600}
+.plan.featured h3{color:var(--white)}
+.badge{font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--coral);color:var(--ink);white-space:nowrap}
+.price{display:flex;align-items:baseline;gap:6px;font-variant-numeric:tabular-nums}
+.price b{font-family:var(--f-display);font-size:52px;font-weight:600;letter-spacing:-.03em;line-height:1}
+.price span{color:var(--muted);font-size:15px}
+.plan.featured .price span,.plan.featured .plan-desc{color:var(--on-pine-muted)}
+.plan-desc{color:var(--muted);font-size:15.5px}
+.plan ul{list-style:none;margin:0;padding:20px 0 0;border-top:1px solid var(--line);display:grid;gap:12px;flex:1}
+.plan.featured ul{border-top-color:rgba(255,255,255,.15)}
+.plan li{display:flex;gap:10px;font-size:15.5px;align-items:start}
+.plan li svg{width:20px;height:20px;flex:none;color:var(--pine-2);margin-top:2px}
+.plan.featured li svg{color:var(--coral)}
+.plan .btn{justify-content:center}
+.price-note{margin-top:24px;text-align:center;color:var(--muted);font-size:14.5px}
+
+/* ---------- Opiniones ---------- */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:28px;display:flex;flex-direction:column;gap:18px}
+.review .stars{font-size:17px}
+.review blockquote{margin:0;font-size:17px;line-height:1.6;flex:1}
+.review footer{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.review .ini{width:42px;height:42px;border-radius:50%;background:var(--mint);color:var(--pine);display:grid;place-items:center;font-weight:700;font-family:var(--f-display)}
+.review footer b{display:block;font-size:15.5px}
+.review footer small{color:var(--muted);font-size:13.5px}
+.sample-note{font-size:13px;color:var(--muted);text-align:center;margin-top:20px}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--white)}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,88px);align-items:start}
+.faq .sec-head{position:sticky;top:110px}
+.faq-list{display:grid;gap:12px}
+details{border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper);transition:background .2s}
+details[open]{background:var(--mint);border-color:var(--mint-2)}
+summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:var(--f-display);font-size:19px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:32px;height:32px;border-radius:50%;background:var(--white);display:grid;place-items:center;flex:none;color:var(--pine);transition:transform .25s}
+summary .pm svg{width:16px;height:16px}
+details[open] summary .pm{transform:rotate(45deg)}
+details p{padding:0 24px 22px;color:var(--muted);max-width:62ch}
+
+/* ---------- Cita ---------- */
+.booking .wrap > .card{background:var(--pine);border-radius:clamp(24px,3vw,36px);overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.booking-copy{padding:clamp(32px,5vw,64px);display:grid;gap:24px;align-content:center;color:var(--on-pine)}
+.booking-copy h2{font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--white)}
+.booking-copy p{color:var(--on-pine-muted);font-size:17.5px}
+.booking-copy .eyebrow{color:var(--on-pine-muted)}
+.contact-mini{display:grid;gap:12px}
+.contact-mini div{display:flex;gap:12px;align-items:center}
+.contact-mini svg{width:20px;height:20px;color:var(--coral);flex:none}
+form.book{background:var(--white);margin:clamp(10px,1.4vw,16px);border-radius:clamp(18px,2.4vw,28px);padding:clamp(24px,3.5vw,40px);display:grid;gap:16px;align-content:start}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:600}
+.field input,.field select,.field textarea{font:16px var(--f-body);padding:13px 15px;border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--paper);color:var(--ink);width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pine-2);background:var(--white)}
+.field textarea{resize:vertical;min-height:96px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;gap:10px;font-size:13.5px;color:var(--muted);align-items:start}
+.consent input{margin-top:3px;accent-color:var(--pine)}
+form.book .btn{justify-content:center;width:100%}
+.form-msg{display:none;padding:14px 16px;border-radius:var(--r-sm);background:var(--mint);color:var(--pine);font-weight:500;font-size:15px}
+.form-msg.show{display:block}
+
+/* ---------- Ubicación ---------- */
+.location .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:18px}
+.info-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.info{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;display:grid;gap:8px;align-content:start}
+.info .ic{width:42px;height:42px;border-radius:12px;background:var(--mint);color:var(--pine);display:grid;place-items:center}
+.info .ic svg{width:22px;height:22px}
+.info h3{font-size:18px;font-weight:600;margin-top:4px}
+.info p{color:var(--muted);font-size:15px;line-height:1.5}
+.info a{color:var(--pine);font-weight:600;font-size:15px;text-underline-offset:3px}
+.info.wide{grid-column:1/-1}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:15px;font-variant-numeric:tabular-nums}
+.hours dt{color:var(--ink);font-weight:500}
+.hours dd{margin:0;color:var(--muted)}
+.map{border-radius:var(--r-lg);overflow:hidden;min-height:420px;background:var(--mint);border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* ---------- Footer ---------- */
+footer.site{background:var(--ink);color:#C4CFCB;padding-top:clamp(56px,7vw,88px)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:48px}
+.foot-grid h4{font-family:var(--f-body);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8FA39C;margin-bottom:16px;font-weight:600}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.foot-grid a{text-decoration:none;color:#DCE5E1;font-size:15.5px}
+.foot-grid a:hover{color:var(--coral)}
+.foot-brand{display:grid;gap:18px;align-content:start}
+.foot-brand .brand-text b{color:var(--white)}
+.foot-brand .brand-text small{color:#8FA39C}
+.foot-brand p{font-size:15.5px;max-width:34ch}
+.foot-contact li{font-size:15.5px;color:#DCE5E1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-block:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:#8FA39C}
+.foot-bottom nav{display:flex;gap:18px;flex-wrap:wrap}
+.foot-bottom a{color:#8FA39C;text-decoration:none}
+.foot-bottom a:hover{color:var(--white)}
+.powered{text-align:center;padding-block:16px 22px;font-size:13px;letter-spacing:.08em;color:#7C8F88;border-top:1px solid rgba(255,255,255,.06)}
+.powered b{color:var(--white);font-weight:600;letter-spacing:.12em}
+
+/* ---------- WhatsApp flotante ---------- */
+.wa{position:fixed;right:max(18px, env(safe-area-inset-right, 0px));bottom:calc(18px + env(safe-area-inset-bottom, 0px));z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.35);transition:transform .2s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:30px;height:30px}
+
+/* ---------- Entrada hero ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > *:nth-child(2){animation-delay:.08s}
+  .hero-copy > *:nth-child(3){animation-delay:.16s}
+  .hero-copy > *:nth-child(4){animation-delay:.24s}
+  .hero-visual{animation:rise .9s .1s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{transform:translateY(18px);opacity:.01}to{transform:none;opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .menu-btn{display:grid}
+  .nav.open .nav-links{display:grid;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:12px var(--gutter) 20px;border-bottom:1px solid var(--line);gap:2px}
+  .nav.open .nav-links a{padding:14px 12px;font-size:17px}
+  .svc-panel,.plans,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .hero .hero-grid,.about .wrap,.why-grid,.faq .wrap,.location .wrap{grid-template-columns:minmax(0,1fr)}
+  .booking .wrap > .card{grid-template-columns:1fr}
+  .hero-img{aspect-ratio:4/3.6}
+  .fc-1{left:12px;bottom:12px}
+  .fc-2{right:12px;top:12px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .about-media{margin-bottom:36px}
+  .faq .sec-head{position:static}
+  .pillars{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .topbar .tb-hide{display:none}
+  .nav-cta .btn{display:none}
+  .brand-text small{display:none}
+  .svc-panel,.plans,.reviews-grid,.steps,.info-cards,.row2{grid-template-columns:1fr}
+  .tabs{width:100%}
+  .tab{flex:1;padding:12px 10px}
+  .fc-2{display:none}
+  .float-card{padding:12px 14px}
+  .stat{padding:20px}
+  .foot-grid{grid-template-columns:1fr}
+  .ticker-track span{font-size:19px}
+}
+.g-mark{width:28px;height:28px;border-radius:50%;background:var(--mint);color:var(--pine);display:grid;place-items:center;font-weight:700;font-family:var(--f-display);font-size:14px}
+.sample-note a{color:var(--pine);font-weight:600;text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- Barra superior -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><strong>C. San Sebastián de la Gomera, 3 · Granada</strong></span>
+      <span class="tb-hide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Atención con cita previa</span>
+    </div>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><strong>722 56 27 80</strong></span>
+  </div>
+</div>
+
+<!-- Navegación -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Podólogo en Granada Antonio Barrios, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M9 25c0-6 3-8 3-13a4 4 0 1 1 8 0c0 5 3 7 3 13" stroke="#EAF4F0" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="12" r="1.8" fill="#EE8457"/><path d="M7 27h18" stroke="#EE8457" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-text"><b>Antonio Barrios</b><small>Podólogo en Granada</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#consulta">La consulta</a></li>
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#primera-visita">Primera visita</a></li>
+      <li><a href="#tarifas">Tarifas</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#cita">Pide cita
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="pill">
+        <span class="g-mark" aria-hidden="true">G</span>
+        <span class="stars" aria-label="5 estrellas">★★★★★</span>
+        5,0 en Google
+      </div>
+      <h1>Camina sin dolor desde <em>el primer paso</em></h1>
+      <p class="hero-lead">Consulta de podología en la zona norte de Granada. Tratamos durezas, uñas encarnadas, dolor de talón y alteraciones de la pisada con un trato cercano y siempre con el mismo profesional.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#cita">Pide tu cita
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#tratamientos">Ver tratamientos</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img"><img src="img/exploracion.jpg" alt="Podólogo con guantes explorando el pie de un paciente" style="object-position:center"></div>
+      <div class="float-card fc-1">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+        <span><b>Atención personal</b><small>Te atiende Antonio Barrios en cada visita</small></span>
+      </div>
+      <div class="float-card fc-2">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span>
+        <span><b>5,0 en Google</b><small>Opiniones de pacientes</small></span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>5,0<sup>★</sup></b><span>Valoración media en Google</span></div>
+      <div class="stat"><b>1:1</b><span>Siempre el mismo podólogo, de la primera visita al alta</span></div>
+      <div class="stat"><b>0</b><span>Volantes: puedes venir sin derivación médica</span></div>
+      <div class="stat"><b>18014</b><span>Zona norte de Granada, junto a tu barrio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker de patologías -->
+<div class="ticker" aria-label="Problemas del pie que tratamos">
+  <div class="ticker-track">
+    <span>Durezas y callos</span><span>Uña encarnada</span><span>Fascitis plantar</span><span>Hongos en las uñas</span><span>Papilomas</span><span>Pie plano</span><span>Hallux valgus</span><span>Metatarsalgia</span><span>Pie diabético</span><span>Dolor de talón</span>
+    <span aria-hidden="true">Durezas y callos</span><span aria-hidden="true">Uña encarnada</span><span aria-hidden="true">Fascitis plantar</span><span aria-hidden="true">Hongos en las uñas</span><span aria-hidden="true">Papilomas</span><span aria-hidden="true">Pie plano</span><span aria-hidden="true">Hallux valgus</span><span aria-hidden="true">Metatarsalgia</span><span aria-hidden="true">Pie diabético</span><span aria-hidden="true">Dolor de talón</span>
+  </div>
+</div>
+
+<!-- La consulta -->
+<section class="about" id="consulta">
+  <div class="wrap">
+    <div class="about-media">
+      <img class="a1" src="img/masaje-pie.jpg" alt="Tratamiento manual de la planta del pie en camilla" style="object-position:40% center">
+      <img class="a2" src="img/consulta.jpg" alt="Profesional sanitario atendiendo a una paciente en consulta">
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">La consulta</span>
+      <h2>Tus pies sostienen todo lo demás. Merecen un especialista</h2>
+      <p>En la consulta de Antonio Barrios en Granada nos dedicamos solo al pie. Desde una dureza que molesta al andar hasta un dolor de talón que no se va, buscamos la causa y te damos un tratamiento claro, con un trato cercano en cada visita.</p>
+      <div class="pillars">
+        <div class="pillar"><h3>Diagnóstico</h3><p>Exploramos el pie, la pisada y el calzado para encontrar el origen del problema.</p></div>
+        <div class="pillar"><h3>Tratamiento</h3><p>Resolvemos en consulta lo que se puede resolver y te explicamos el plan para el resto.</p></div>
+        <div class="pillar"><h3>Prevención</h3><p>Te damos pautas de cuidado y calzado para que el problema no vuelva.</p></div>
+      </div>
+      <div><a class="btn btn-ghost" href="#primera-visita">Cómo es la primera visita</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tratamientos -->
+<section class="services" id="tratamientos">
+  <div class="wrap">
+    <div class="svc-top">
+      <div class="sec-head">
+        <span class="eyebrow">Tratamientos</span>
+        <h2>Cuidamos cada parte de tu pie</h2>
+        <p>Elige un área para ver lo que tratamos en consulta.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Áreas de tratamiento">
+        <button class="tab" role="tab" id="tab-general" aria-selected="true" aria-controls="panel-general">Podología general</button>
+        <button class="tab" role="tab" id="tab-bio" aria-selected="false" aria-controls="panel-bio">Biomecánica y deporte</button>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="panel-general" role="tabpanel" aria-labelledby="tab-general">
+      <article class="svc">
+        <div class="svc-img"><img src="img/planta.jpg" alt="Plantas de los pies en primer plano" loading="lazy"></div>
+        <div class="svc-body"><span class="tag">Podología general</span><h3>Quiropodia</h3><p>Eliminación de durezas, callos y helomas, y corte y fresado de uñas gruesas o difíciles de cortar.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-img"><img src="img/dedos.jpg" alt="Dedos y uñas del pie en primer plano" loading="lazy"></div>
+        <div class="svc-body"><span class="tag">Podología general</span><h3>Uña encarnada</h3><p>Tratamiento conservador o cirugía ungueal con anestesia local cuando la uña vuelve a clavarse una y otra vez.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-img"><img src="img/talon.jpg" alt="Tratamiento en el talón de un paciente" loading="lazy"></div>
+        <div class="svc-body"><span class="tag">Podología general</span><h3>Dolor de talón</h3><p>Fascitis plantar y talalgias: tratamiento en consulta, vendajes, plantillas y ejercicios para casa.</p></div>
+      </article>
+      <article class="svc compact">
+        <div class="svc-body">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 4h8v6a4 4 0 0 1-8 0z"/><path d="M10 8h4"/></svg></span>
+          <h3>Hongos en las uñas</h3><p>Diagnóstico y tratamiento de la onicomicosis para recuperar uñas sanas.</p></div>
+      </article>
+      <article class="svc compact">
+        <div class="svc-body">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>Papilomas</h3><p>Eliminación de verrugas plantares, que duelen al pisar y se contagian con facilidad.</p></div>
+      </article>
+      <article class="svc compact">
+        <div class="svc-body">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/></svg></span>
+          <h3>Pie diabético</h3><p>Revisión periódica de sensibilidad y circulación, y cuidado preventivo para evitar lesiones.</p></div>
+      </article>
+    </div>
+
+    <div class="svc-panel" id="panel-bio" role="tabpanel" aria-labelledby="tab-bio" hidden>
+      <article class="svc">
+        <div class="svc-img"><img src="img/rayos.jpg" alt="Imagen de la estructura ósea de ambos pies" loading="lazy"></div>
+        <div class="svc-body"><span class="tag">Biomecánica</span><h3>Estudio de la pisada</h3><p>Análisis en estática y en marcha para detectar pie plano, cavo o pronador y su efecto en rodillas y espalda.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-img"><img src="img/pisada.jpg" alt="Pies descalzos caminando sobre una esterilla" loading="lazy"></div>
+        <div class="svc-body"><span class="tag">Biomecánica</span><h3>Plantillas a medida</h3><p>Plantillas hechas a partir de tu estudio, para el calzado de diario, el trabajo o el deporte.</p></div>
+      </article>
+      <article class="svc">
+        <div class="svc-img"><img src="img/deportiva.jpg" alt="Corredor con zapatillas de running en plena zancada" loading="lazy" style="object-position:center 70%"></div>
+        <div class="svc-body"><span class="tag">Deporte</span><h3>Podología deportiva</h3><p>Prevención y tratamiento de lesiones en corredores y deportistas, y consejo sobre la zapatilla adecuada.</p></div>
+      </article>
+      <article class="svc compact">
+        <div class="svc-body">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 20c0-5 2-7 2-11a4 4 0 0 1 8 0c0 4 2 6 2 11"/><path d="M9 15h6"/></svg></span>
+          <h3>Metatarsalgia</h3><p>Dolor en la parte delantera del pie al caminar o al llevar tacón.</p></div>
+      </article>
+      <article class="svc compact">
+        <div class="svc-body">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 17c4 0 5-6 8-6s4 6 8 6"/><path d="M4 21h16"/></svg></span>
+          <h3>Pie plano y pie cavo</h3><p>Valoración del arco plantar y tratamiento con plantillas y ejercicios.</p></div>
+      </article>
+      <article class="svc compact">
+        <div class="svc-body">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6" r="3"/><path d="M12 9v6M9 21l3-6 3 6M8 12h8"/></svg></span>
+          <h3>Pie infantil</h3><p>Revisión de la pisada en niños para detectar a tiempo alteraciones del crecimiento.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Por qué elegirnos -->
+<section class="why" id="por-que">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Por qué elegirnos</span>
+      <h2 style="color:var(--white)">Lo que más valoran nuestros pacientes</h2>
+      <p>Tres cosas que se repiten en las opiniones de quienes ya han pasado por la consulta.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-list">
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+          <div><h3>Profesionalidad y buen trato</h3><p>Te atiende siempre la misma persona, que conoce tu historia y tus pies.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8"/></svg></span>
+          <div><h3>Te explicamos todo</h3><p>Sabrás qué tienes, por qué ocurre y cómo cuidar tus pies en casa.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></span>
+          <div><h3>Instalaciones cuidadas</h3><p>Una consulta limpia y agradable, con material esterilizado en cada tratamiento.</p></div>
+        </div>
+      </div>
+      <div class="why-media">
+        <img src="img/exploracion.jpg" alt="Exploración del pie con guantes" loading="lazy" style="object-position:center 40%">
+        <div class="quote"><b>«Un gran profesional, muy buen trato y nos ha dejado los pies estupendos.»</b> Reseña de un paciente en Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Primera visita -->
+<section id="primera-visita">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Tu primera visita</span>
+      <h2>Así es tu cita en la consulta</h2>
+      <p>Desde que llamas hasta que sales por la puerta, sabrás en todo momento qué te vamos a hacer.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-n">Paso 1</span><h3>Pide cita</h3><p>Llama o escríbenos por WhatsApp y buscamos la hora que mejor te venga.</p><small>Teléfono o WhatsApp</small></div>
+      <div class="step"><span class="step-n">Paso 2</span><h3>Exploración</h3><p>Hablamos de lo que te ocurre y revisamos el pie, la pisada y tu calzado.</p><small>Primera visita</small></div>
+      <div class="step"><span class="step-n">Paso 3</span><h3>Tratamiento</h3><p>Resolvemos en consulta lo que se puede tratar ese mismo día y te explicamos los siguientes pasos.</p><small>En la misma cita</small></div>
+      <div class="step"><span class="step-n">Paso 4</span><h3>Revisión</h3><p>Te damos pautas para casa y fijamos una revisión si el tratamiento lo necesita.</p><small>Seguimiento</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tarifas -->
+<section class="pricing" id="tarifas">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Tarifas</span>
+      <h2>Precios claros, sin sorpresas</h2>
+      <p>Sabrás lo que cuesta tu tratamiento antes de empezar.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-head"><h3>Quiropodia</h3></div>
+        <div class="price"><b>25 €</b><span>/ sesión</span></div>
+        <p class="plan-desc">El cuidado básico del pie, para revisar cada pocas semanas.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Durezas, callos y helomas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Corte y fresado de uñas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Revisión general del pie</li>
+        </ul>
+        <a class="btn btn-ghost" href="#cita">Reservar</a>
+      </div>
+      <div class="plan featured">
+        <div class="plan-head"><h3>Estudio de la pisada</h3><span class="badge">Más pedido</span></div>
+        <div class="price"><b>50 €</b><span>/ estudio</span></div>
+        <p class="plan-desc">Para dolor al caminar, al correr o al estar mucho de pie.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Exploración en camilla</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Análisis de la pisada en estática y en marcha</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Revisión del calzado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Informe y recomendaciones</li>
+        </ul>
+        <a class="btn btn-coral" href="#cita">Reservar estudio</a>
+      </div>
+      <div class="plan">
+        <div class="plan-head"><h3>Plantillas a medida</h3></div>
+        <div class="price"><b>120 €</b><span>/ par, desde</span></div>
+        <p class="plan-desc">Fabricadas a partir de tu estudio de la pisada.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Para diario, trabajo o deporte</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Prueba y ajuste en consulta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>Revisión de seguimiento</li>
+        </ul>
+        <a class="btn btn-ghost" href="#cita">Reservar</a>
+      </div>
+    </div>
+    <p class="price-note">Precios orientativos con IVA incluido. Uña encarnada, papilomas y otros tratamientos: consúltanos.</p>
+  </div>
+</section>
+
+<!-- Opiniones -->
+<section id="opiniones">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Opiniones</span>
+      <h2>5,0 en Google. Esto dicen nuestros pacientes</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <span class="stars" aria-label="5 estrellas">★★★★★</span>
+        <blockquote>Un gran profesional, muy buen trato y nos ha dejado los pies estupendos.</blockquote>
+        <footer><span class="ini">G</span><span><b>Paciente</b><small>Reseña en Google</small></span></footer>
+      </article>
+      <article class="review">
+        <span class="stars" aria-label="5 estrellas">★★★★★</span>
+        <blockquote>Excelente servicio, totalmente recomendable, instalaciones muy agradables.</blockquote>
+        <footer><span class="ini">G</span><span><b>Paciente</b><small>Reseña en Google</small></span></footer>
+      </article>
+      <article class="review">
+        <span class="stars" aria-label="5 estrellas">★★★★★</span>
+        <blockquote>Profesionalidad y buen trato.</blockquote>
+        <footer><span class="ini">G</span><span><b>Paciente</b><small>Reseña en Google</small></span></footer>
+      </article>
+    </div>
+    <p class="sample-note"><a href="https://www.google.com/maps/place/Pod%C3%B3logo+en+Granada+ANTONIO+BARRIOS/@37.2015849,-3.6231824,17z/data=!4m6!3m5!1s0xd71fd852c533725:0xaed054ccfaac5776!8m2!3d37.2015849!4d-3.6231824" target="_blank" rel="noopener">Ver todas las opiniones en Google →</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Resolvemos tus dudas</h2>
+      <p>Si no encuentras tu pregunta, llámanos o escríbenos por WhatsApp.</p>
+      <div><a class="btn btn-primary" href="#cita">Contactar</a></div>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>¿Necesito volante médico para ir al podólogo?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>No. Puedes pedir cita directamente. Si tienes informes o pruebas de imagen relacionadas con el pie, tráelos y nos ayudarán en la valoración.</p>
+      </details>
+      <details>
+        <summary>¿Cada cuánto conviene hacer una quiropodia?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Depende de cada pie. Hay quien necesita una revisión cada mes y quien puede esperar varios meses. En la primera visita te diremos qué frecuencia te conviene.</p>
+      </details>
+      <details>
+        <summary>¿Duele el tratamiento de la uña encarnada?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Si hace falta intervenir, se aplica anestesia local, así que durante el tratamiento no deberías sentir dolor. Te explicamos los cuidados posteriores antes de irte.</p>
+      </details>
+      <details>
+        <summary>¿Qué llevo al estudio de la pisada?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>El calzado que más usas y, si haces deporte, tus zapatillas. Ven con ropa cómoda que permita ver bien las rodillas.</p>
+      </details>
+      <details>
+        <summary>¿Trabajáis con mutuas o seguros?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Consúltanos tu compañía al pedir cita y te diremos si podemos atenderte a través de ella o cuál es la tarifa privada.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Cita -->
+<section class="booking" id="cita">
+  <div class="wrap">
+    <div class="card">
+      <div class="booking-copy">
+        <span class="eyebrow">Pide cita</span>
+        <h2>Tus pies, en buenas manos</h2>
+        <p>Déjanos tus datos y te llamamos para buscar la hora que mejor te venga. También puedes llamarnos o escribirnos por WhatsApp.</p>
+        <div class="contact-mini">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>722 56 27 80</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Atención con cita previa</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>C. San Sebastián de la Gomera, 3, bajo 2, Granada</div>
+        </div>
+      </div>
+      <form class="book" id="bookForm" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" autocomplete="name" required placeholder="Tu nombre"></div>
+          <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" required placeholder="600 000 000"></div>
+        </div>
+        <div class="field"><label for="f-servicio">Motivo de la consulta</label>
+          <select id="f-servicio" name="servicio">
+            <option>Quiropodia (durezas, callos, uñas)</option>
+            <option>Uña encarnada</option>
+            <option>Dolor de talón o de pie</option>
+            <option>Estudio de la pisada / plantillas</option>
+            <option>Otro motivo</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-franja">Preferencia horaria</label>
+          <select id="f-franja" name="franja"><option>Mañana</option><option>Tarde</option><option>Me da igual</option></select>
+        </div>
+        <div class="field"><label for="f-msg">¿Qué te ocurre? <span style="font-weight:400;color:var(--muted)">(opcional)</span></label><textarea id="f-msg" name="mensaje" placeholder="Ej.: me duele el talón al levantarme desde hace dos meses"></textarea></div>
+        <label class="consent" for="f-ok"><input id="f-ok" type="checkbox" required> Acepto la política de privacidad y que me contactéis para gestionar mi cita.</label>
+        <button class="btn btn-primary" type="submit">Solicitar cita
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="form-msg" id="formMsg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section class="location" id="contacto" style="padding-top:0">
+  <div class="wrap">
+    <div class="info-cards">
+      <div class="info wide">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <h3>Dónde estamos</h3>
+        <p>Podólogo en Granada Antonio Barrios<br>C. San Sebastián de la Gomera, 3, bajo 2<br>18014 Granada</p>
+        <a href="https://www.google.com/maps/place/Pod%C3%B3logo+en+Granada+ANTONIO+BARRIOS/@37.2015849,-3.6231824,17z/data=!4m6!3m5!1s0xd71fd852c533725:0xaed054ccfaac5776!8m2!3d37.2015849!4d-3.6231824" target="_blank" rel="noopener">Cómo llegar en Google Maps →</a>
+      </div>
+      <div class="info">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h3>Horario</h3>
+        <p>Atención con cita previa. Llama o escribe por WhatsApp para consultar disponibilidad.</p>
+      </div>
+      <div class="info">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+        <h3>Teléfono y WhatsApp</h3>
+        <p>722 56 27 80</p>
+        <a href="https://wa.me/34722562780" target="_blank" rel="noopener">Escribir por WhatsApp →</a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Mapa de la consulta" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=37.2015849,-3.6231824&amp;z=16&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M9 25c0-6 3-8 3-13a4 4 0 1 1 8 0c0 5 3 7 3 13" stroke="#EAF4F0" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="12" r="1.8" fill="#EE8457"/><path d="M7 27h18" stroke="#EE8457" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+          <span class="brand-text"><b>Antonio Barrios</b><small>Podólogo en Granada</small></span>
+        </a>
+        <p>Consulta de podología en la zona norte de Granada. Te ayudamos a caminar sin dolor.</p>
+      </div>
+      <div>
+        <h4>La consulta</h4>
+        <ul>
+          <li><a href="#consulta">Sobre la consulta</a></li>
+          <li><a href="#primera-visita">Primera visita</a></li>
+          <li><a href="#tarifas">Tarifas</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tratamientos</h4>
+        <ul>
+          <li><a href="#tratamientos" data-tab="general">Quiropodia</a></li>
+          <li><a href="#tratamientos" data-tab="general">Uña encarnada</a></li>
+          <li><a href="#tratamientos" data-tab="general">Dolor de talón</a></li>
+          <li><a href="#tratamientos" data-tab="bio">Estudio de la pisada</a></li>
+          <li><a href="#tratamientos" data-tab="bio">Plantillas a medida</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <h4>Contacto</h4>
+        <ul>
+          <li>C. San Sebastián de la Gomera, 3, bajo 2<br>18014 Granada</li>
+          <li>722 56 27 80</li>
+          <li>Atención con cita previa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Podólogo en Granada Antonio Barrios</span>
+      <nav aria-label="Legal"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a></nav>
+    </div>
+  </div>
+  <div class="powered">Powered by <b>VELNOX</b></div>
+</footer>
+
+<a class="wa" href="https://wa.me/34722562780" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  var btn = document.getElementById('menuBtn');
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }, {passive:true});
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
+  });
+
+  // Pestañas de tratamientos
+  var tabs = {general: document.getElementById('tab-general'), bio: document.getElementById('tab-bio')};
+  var panels = {general: document.getElementById('panel-general'), bio: document.getElementById('panel-bio')};
+  function show(key){
+    Object.keys(tabs).forEach(function(k){
+      tabs[k].setAttribute('aria-selected', k === key);
+      panels[k].hidden = k !== key;
+    });
+  }
+  tabs.general.addEventListener('click', function(){ show('general'); });
+  tabs.bio.addEventListener('click', function(){ show('bio'); });
+  document.querySelectorAll('[data-tab]').forEach(function(a){
+    a.addEventListener('click', function(){ show(a.dataset.tab); });
+  });
+
+  // Formulario (demo: no envía datos)
+  var form = document.getElementById('bookForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = form.nombre.value.trim();
+    if (!nombre || !form.telefono.value.trim()) {
+      msg.textContent = 'Indica tu nombre y un teléfono para que podamos llamarte.';
+    } else if (!document.getElementById('f-ok').checked) {
+      msg.textContent = 'Marca la casilla de privacidad para enviar la solicitud.';
+    } else {
+      msg.textContent = 'Gracias, ' + nombre + '. Te llamaremos para confirmar la hora de tu cita. (Demo: el formulario aún no está conectado.)';
+      form.reset();
+    }
+    msg.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
